@@ -4,5 +4,5 @@ Download [Kinect for Windows SDK v1.8](https://www.microsoft.com/en-us/download/
 ```
 mkdir _build_
 cd _build_
-cmake .. -G"Visual Studio 10 2010" -DCMAKE_INSTALL_PREFIX="..\_output_
+cmake .. -G"Visual Studio 10 2010" -DCMAKE_INSTALL_PREFIX="..\_output_"
 ```
