@@ -42,6 +42,7 @@ IF( CMAKE_SYSTEM_NAME MATCHES "Windows" )
 			)	
 		
 		SET	(	SOURCES
+				${HEADERS}
 				src/RKFWCriticalSectionEnterer.cpp
 				src/RKFWCOMObjectSharedPtr.cpp
 				src/RKFWMemoryBuffer.cpp
@@ -64,7 +65,7 @@ IF( CMAKE_SYSTEM_NAME MATCHES "Windows" )
 		SOURCE_GROUP("" FILES ${SOURCES} )		# Avoid "Header Files" and "Source Files" virtual folders in VisualStudio
 
 		SET(CMAKE_DEBUG_POSTFIX "d")
-		ADD_LIBRARY( ${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES} )
+		ADD_LIBRARY( ${PROJECT_NAME} STATIC ${SOURCES} )
 		TARGET_LINK_LIBRARIES( ${PROJECT_NAME} ${KinectSDK_LIBRARY} ${KinectDevelopperToolkit_LIBRARY} ) 
 	
 		#
